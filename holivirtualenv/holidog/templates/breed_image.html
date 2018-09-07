@@ -1,4 +1,12 @@
-<h1>Breed Image Page Test</h1>
+{% extends 'base.html' %}
 
 
-<img src="{{ breed_image }}">
+
+{% block content %}
+
+<h3 style="text-align: center;">A random picture of your breed choice</h3>
+<div class="text-center">
+  <img src="{{ breed_image }} " class="img-thumbnail" alt="...">
+</div>
+
+{% endblock %}

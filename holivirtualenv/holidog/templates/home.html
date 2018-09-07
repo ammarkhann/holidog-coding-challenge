@@ -1,12 +1,20 @@
-<h1>Hello World</h1>
+{% extends 'base.html' %}
 
+{% block content %}
 
+<h1 style="text-align: center;">Dog Breeds List</h1>
 
 {% for x in dog_breed_list %}
 
-
 <ul>
-	<a href="breed/{{ x }}"><li>{{ x }}</li></a>
+	
+	<li><a href="breed/{{ x }}">{{ x }}</a></li>
+
 </ul>
 
 {% endfor %}
+
+{% endblock %}
+
+
+
