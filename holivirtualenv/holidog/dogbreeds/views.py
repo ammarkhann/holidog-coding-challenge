@@ -24,3 +24,17 @@ def home(request):
 	}
 
 	return render(request,"home.html",context)
+
+
+
+def breed_image(request,slug):
+
+	print (slug)
+	response = json.loads(requests.get("https://dog.ceo/api/breed/"+slug+"/images/random").content)
+	
+	context = {
+		"breed_image": response['message']
+
+	}
+
+	return render(request, "breed_image.html" ,context)

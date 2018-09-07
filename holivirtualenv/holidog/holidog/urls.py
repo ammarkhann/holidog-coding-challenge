@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
-from dogbreeds.views import home
+from dogbreeds.views import home,breed_image
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', home, name='home'),
+    url(r'^breed/(?P<slug>[\w-]+)/$', breed_image, name='breed_image'),
 ]
